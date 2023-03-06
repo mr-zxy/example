@@ -1,0 +1,190 @@
+[2023-01-30T10:29:55.048] [INFO] default - port:8000__启动成功!
+[2023-01-30T15:52:51.441] [INFO] default - port:8000__启动成功!
+[2023-01-30T15:52:57.143] [INFO] default - GET /getCommodity?page_size=1&page_number=100 [Object: null prototype] {
+  page_size: '1',
+  page_number: '100',
+  start_time: '1970-01-01',
+  end_time: '2023-01-30',
+  province_id: '',
+  city_id: '',
+  county_id: '',
+  categroy_id: ''
+} 
+[2023-02-07T10:50:47.708] [INFO] default - port:8000__启动成功!
+[2023-02-07T10:51:43.147] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:54.530] [INFO] default - port:8000__启动成功!
+[2023-02-07T10:51:55.034] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:55.468] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:55.826] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:55.997] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:56.208] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:56.403] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:56.906] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:57.014] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:57.096] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:57.179] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:51:57.263] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:52:02.790] [INFO] default - GET /reptilesVideo [Object: null prototype] {} 
+[2023-02-07T10:52:50.112] [INFO] default - port:8000__启动成功!
+[2023-02-07T10:53:40.138] [INFO] default - port:8000__启动成功!
+[2023-02-07T11:05:28.751] [INFO] default - POST /reptilesVideo undefined 
+[2023-02-07T11:08:34.463] [INFO] default - POST /reptilesVideo { aaa: '1111' } 
+[2023-02-07T11:10:02.687] [INFO] default - POST /reptilesVideo {
+  url: '',
+  name: '',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T11:48:36.692] [INFO] default - port:8000__启动成功!
+[2023-02-07T11:53:37.870] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T11:54:38.931] [INFO] default - port:8000__启动成功!
+[2023-02-07T11:54:41.942] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:39:50.259] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:40:42.245] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:40:43.989] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:41:13.074] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:41:14.857] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:41:26.738] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:41:28.780] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:41:48.945] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:41:51.091] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:42:00.317] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:42:02.343] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:42:40.486] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:42:41.452] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:42:47.516] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:42:48.630] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:43:25.656] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:43:29.577] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:45:36.588] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:47:04.183] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:47:04.900] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: '0',
+  end_num: '0.00',
+  everyDownLoadNum: '0'
+} 
+[2023-02-07T12:47:09.772] [INFO] default - 下载完成第：1个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000000.ts
+[2023-02-07T12:47:13.429] [INFO] default - 下载完成第：2个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000001.ts
+[2023-02-07T12:47:15.353] [INFO] default - 下载完成第：3个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000002.ts
+[2023-02-07T12:47:17.289] [INFO] default - 下载完成第：4个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000003.ts
+[2023-02-07T12:47:19.811] [INFO] default - 下载完成第：5个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000004.ts
+[2023-02-07T12:47:22.631] [INFO] default - 下载完成第：6个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000005.ts
+[2023-02-07T12:47:24.999] [INFO] default - 下载完成第：7个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000006.ts
+[2023-02-07T12:47:28.992] [INFO] default - 下载完成第：8个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000007.ts
+[2023-02-07T12:47:49.770] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:48:28.843] [ERROR] default - POST /reptilesVideo { url: '', name: '' } url是必填项哦！
+[2023-02-07T12:48:47.957] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: 0,
+  end_num: 0,
+  everyDownLoadNum: 10
+} 
+[2023-02-07T12:49:00.807] [INFO] default - 下载完成第：10个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000000.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000001.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000002.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000003.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000004.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000005.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000006.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000007.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000008.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000009.ts
+[2023-02-07T12:49:10.823] [INFO] default - 下载完成第：20个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000010.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000011.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000012.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000013.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000014.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000015.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000016.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000017.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000018.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000019.ts
+[2023-02-07T12:49:17.362] [INFO] default - 下载完成第：30个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000020.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000021.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000022.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000023.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000024.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000025.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000026.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000027.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000028.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000029.ts
+[2023-02-07T12:49:21.721] [INFO] default - 下载完成第：40个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000030.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000031.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000032.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000033.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000034.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000035.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000036.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000037.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000038.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000039.ts
+[2023-02-07T12:49:25.741] [INFO] default - 下载完成第：50个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000040.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000041.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000042.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000043.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000044.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000045.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000046.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000047.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000048.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000049.ts
+[2023-02-07T12:49:33.872] [INFO] default - 下载完成第：60个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000050.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000051.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000052.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000053.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000054.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000055.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000056.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000057.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000058.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000059.ts
+[2023-02-07T12:49:41.261] [INFO] default - 下载完成第：70个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000060.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000061.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000062.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000063.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000064.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000065.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000066.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000067.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000068.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000069.ts
+[2023-02-07T12:49:46.648] [INFO] default - 下载完成第：80个,总长度：656,url：https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000070.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000071.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000072.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000073.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000074.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000075.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000076.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000077.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000078.ts,https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/e8fad58ccbd000079.ts
+[2023-02-07T12:50:03.499] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:50:06.233] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: 0,
+  end_num: 0,
+  everyDownLoadNum: 10
+} 
+[2023-02-07T12:50:17.351] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:50:18.828] [INFO] default - sss
+[2023-02-07T12:50:18.831] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: 0,
+  end_num: 0,
+  everyDownLoadNum: 10
+} 
+[2023-02-07T12:51:00.011] [INFO] default - port:8000__启动成功!
+[2023-02-07T12:51:01.860] [INFO] default - POST /reptilesVideo {
+  url: 'https://cdn14.hdzyk-cdn.com/20230115/1997_3992be88/1000k/hls/index.m3u8',
+  name: '三体/01',
+  start_num: 0,
+  end_num: 0,
+  everyDownLoadNum: 10
+} 

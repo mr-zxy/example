@@ -1,0 +1,31 @@
+version: '2.2'
+services:
+  myNodeMarket:
+    build: .
+    image: node-market
+    depends_on: 
+      - mysql
+    ports: 
+      - "8000:8000"
+    volumes:
+      - /service/web/assets/video:/home/node-market/assets/video
+  mysql:
+    container_name: mysql-market
+    restart: always
+    image: mysql
+    ports:
+      - "3307:3306"
+    volumes:
+      - /home/mysql2/conf:/etc/mysql/conf.d
+      - /home/mysql2/logs:/logs
+      - /home/mysql2/data:/var/lib/mysql
+    command: [
+          'mysqld',
+          '--innodb-buffer-pool-size=80M',
+          '--character-set-server=utf8mb4',
+          '--collation-server=utf8mb4_unicode_ci',
+          '--default-time-zone=+8:00',
+          '--lower-case-table-names=1'
+        ]
+    environment:
+      MYSQL_ROOT_PASSWORD: root

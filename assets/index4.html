@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>老司机视频</title>
+    <script src="https://cdn.bootcss.com/vue/2.5.2/vue.min.js" rel="stylesheet" type="text/javascript"></script>
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+    <script src='https://vjs.zencdn.net/7.4.1/video.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.15.0/videojs-contrib-hls.min.js"
+        type="text/javascript"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.2/axios.min.js"></script>
+</head>
+
+<body>
+    <style>
+        /* #myVideo_html5_api{
+            height: 200px !important;
+        } */
+        .video-js .vjs-tech {
+            position: relative !important;
+        }
+
+        .desc {
+            margin: 4px 0;
+            padding: 0px 10px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+
+    <div id="app">
+        <p>文件：</p>
+        <button @click="goBack">返回上一步</button>
+        <ul>
+            <li class="desc" v-for="i in list" :key="i.id" @click="checkUrl(i)">{{i}}</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            list: [],
+            storageList: [],
+            prev: "",
+            // http_url: "http://43.139.179.215:8000/",
+            http_url: "http://101.43.131.37:8000/",
+            url: localStorage.getItem("url")
+        },
+        async created() {
+            axios.defaults.timeout = 100000;
+            this.getList();
+        },
+
+        methods: {
+            async getList(url = "") {
+                const response = await axios.get(`${this.http_url}getFileList?url=${url}`);
+                this.list = response?.data?.list || [];
+            },
+
+            async checkUrl(url) {
+                const _url = this.setStorage(url);
+                try {
+                    await this.getList(_url)
+                    this.prev = url;
+                } catch (e) {
+                    console.error(e)
+                }
+            },
+            goBack() {
+                let str = "";
+                this.storageList.forEach((element, index) => {
+                    if (element.length === 0) {
+                        this.storageList.splice(index, 1)
+                    }
+                    element.forEach((v, idx) => {
+                        if (v === this.prev) {
+                            element.splice(idx, 1)
+                            this.prev = element[element.length - 1]
+                            str = element.join("/")
+                        }
+                    })
+                })
+                this.getList(str)
+            },
+
+            setStorage(url) {
+                if (/\.mp4/.test(url)) {
+                    this.storageList.forEach(element => {
+                        if (element) {
+                            element.forEach(v => {
+                                if (v === this.prev) {
+                                    // console.log(this.http_url+element.join("/")+"/"+url)
+                                    localStorage.setItem('url', this.http_url+element.join("/")+"/"+url);
+                                    location.href = "/index3.html";
+                                }
+                            })
+                        }
+                    });
+                    return false
+                }
+                if (/\./.test(url)) {
+                    return false
+                }
+                let str = "";
+                let flag = true;
+                this.storageList.forEach(element => {
+                    if (element) {
+                        element.forEach(v => {
+                            if (v === this.prev) {
+                                flag = false;
+                                element.push(url)
+                                str = element.join("/")
+                            }
+                        })
+                    }
+                });
+                if (flag) {
+                    str = url;
+                    this.storageList.push([url])
+                }
+                return str
+            }
+        }
+    })
+</script>

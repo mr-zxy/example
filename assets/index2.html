@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据查询可视化平台</title>
+    <style>
+        .item {
+            margin: 20px;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<script src="https://cdn.bootcss.com/vue/2.5.2/vue.min.js" rel="stylesheet" type="text/javascript"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.2/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+    integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+    <div id="app">
+        <div>
+            <textarea style="width: 400px;" type="text" v-bind:value="url" v-model="url"
+                placeholder="?pid=1&cid=3136&county_id=110&s_id=10"></textarea>
+            <button @click="add()">爬取</button>
+            <button @click="updateCategory()">更新数据库品类</button>
+            <button @click="addCategoryAll()">爬取全部</button>
+        </div>
+        <div>
+            <ol>
+                <li v-for="v in list">
+                    <div :key="v.id" class="item" @click="item(v)">
+                        <b>省</b>
+                        {{v.province}}
+                        <b>市</b>
+                        {{v.city}}
+                        <b>县/区</b>
+                        {{v.county}}
+                        <b>品类名称</b>
+                        {{v.categroy_name}}
+                        <b>数据量</b>
+                        {{v.commodity_total}}
+                        <b>爬取日期</b>
+                        {{moment(new Date(v.create_date)).format("YYYY-MM-DD HH:mm:ss")}}
+                        <button @click.stop="hDelete(v)">删除</button>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        var vue = new Vue({
+            el: "#app",
+            data: {
+                // http_url: "http://8.140.182.127:8000/",
+                http_url: "http://127.0.0.1:8000/",
+                url: "?pid=1&cid=3136&county_id=113&s_id=22",
+                list: []
+            },
+            created() {
+                axios.defaults.timeout = 100000;
+                this.getList()
+            },
+            methods: {
+                item(v) {
+                    const d = moment(new Date(v.create_date)).format("YYYY-MM-DD HH:mm:ss");
+                    location.href = `${this.http_url}viewCommodity?page_number=200&release_price=9999&province_id=${v.province_id}&city_id=${v.city_id}&county_id=${v.county_id}&categroy_id=${v.categroy_id}&create_date=${d}`
+                },
+                async hDelete(v) {
+                    const response = await axios.delete(`${this.http_url}deleteCommodity/${v.commodity_id}`);
+                    if (response.data.code == 200) {
+                        alert("删除成功")
+                        location.reload()
+                    }
+                },
+                async add() {
+                    const options = this.locationFormat(this.url);
+                    const response = await axios.post(`${this.http_url}addCommodity`, {
+                        province_id: options.pid,
+                        city_id: options.cid,
+                        county_id: options.county_id,
+                        categroy_id: options.s_id
+                    });
+                    if (response.data.code == 200) {
+                        alert("添加成功")
+                        location.reload()
+                    }
+                },
+                async addCategoryAll() {
+                    const proAll = [19, 22, 20, 16, 18, 21, 51, 52, 53, 54, 55, 56, 10, 27, 8, 31, 32, 9, 25, 29, 36, 38, 42, 40, 43, 44, 45, 0]
+
+                    for (var i = 0; i <= proAll.length;) {
+                        await axios.post(`${this.http_url}addCommodity`, (() => {
+                            const options = this.locationFormat(this.url + i)
+                            return {
+                                province_id: options.pid,
+                                city_id: options.cid,
+                                county_id: options.county_id,
+                                categroy_id: options.s_id
+                            }
+                        })());
+                        i++;
+                    }
+
+                    // const response = await Promise.all(proAll);
+                    alert("添加成功")
+                    location.reload()
+                },
+                async updateCategory() {
+                    const response = await axios.get(`${this.http_url}updateCategory`);
+                    if (response.data.code == 200) {
+                        alert("更新成功")
+                    }
+                },
+                async getList() {
+                    const response = await axios.get(`${this.http_url}getCommodity?page_size=1&page_number=100`);
+                    const list = response?.data?.list || [];
+                    this.list = list
+                },
+
+                locationFormat(url) {
+                    var u = url.split("?");
+                    if (typeof (u[1]) == "string") {
+                        u = u[1].split("&");
+                        var get = {};
+                        for (var i in u) {
+                            var j = u[i].split("=");
+                            get[j[0]] = j[1];
+                        }
+                        return get;
+                    } else {
+                        return {};
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

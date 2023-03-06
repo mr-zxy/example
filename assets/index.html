@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex .left {
+            width: 800px;
+            height: 600px;
+            overflow: auto;
+        }
+
+        .flex .right {
+            width: 50%;
+            height: 600px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<label>url:</label>
+<input type="text" id="text">
+<label>名称:</label>
+<input type="text" id="text1">
+<!-- <label>并发次数:</label> -->
+<!-- <input type="number" value="10" id="text2"> -->
+<button id="start">start!</button>
+<!-- <button id="stop1">stop!</button> -->
+<button id="infoVideo">查看视频列表</button>
+<div class="flex">
+    <div class="left">
+        <p>下载日志输出</p>
+        <progress id="progress" value="0" max="0"></progress>
+        <div id="downLog"></div>
+    </div>
+    <div class="right">
+        <p>结果日志输出</p>
+        <div id="resultLog"></div>
+    </div>
+</div>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script>
+        const socket = io.connect("");
+        let startFlag = false;
+        start.onclick = function () {
+            if (!text.value) {
+                alert("请输入url！")
+                return false;
+            }
+            if (!text1.value) {
+                alert("请输入name！")
+                return false;
+            }
+            if (startFlag) {
+                alert("小贼，等待下载完的再点！")
+                return false;
+            }
+            startFlag = true;
+            const l = locationFormat(location.href);
+            socket.emit('ReptilesVideoStart', {
+                url: text.value,
+                name: text1.value,
+                everyDownLoadNum: l.n || 10
+            });
+        }
+
+        // stop1.onclick = function () {
+        //     startFlag = false;
+        //     socket.emit('ReptilesVideoStop');
+        // }
+
+        socket.on('disconnect', function () {
+            startFlag = false;
+            alert("连接断开了！")
+        });
+        let tempCount = 0;
+        let tempFlag = true;
+        socket.on('ReptilesVideoMessage', data => {
+            if (data instanceof Object) {
+                let str = "";
+                if (data.status === 501) {
+                    startFlag = false;
+                    str = `失败链接：<p>${data.message}</p>`;
+                } else if (data.status === 500 && (data.message.code === "ENOTFOUND" || data.message.code === "ERR_INVALID_URL")) {
+                    startFlag = false;
+                    str = `<p>网路错误，无法通过链接连接到远程服务器。${data.url}</p>`;
+                } else if (data.status === 500) {
+                    startFlag = false;
+                    str = `<p>${"链接失效"}</p>`;
+                } else if (data.status === 400) {
+                    startFlag = false;
+                    str = `<p>暂时终止：${data.message}</p>`;
+                } else if (data.status === 501) {
+                    startFlag = false;
+                    str = `<p>验证错误：${data.message}</p>`;
+                } else if (data.status === 200) {
+                    startFlag = false;
+                    str = `<p>${data.message}</p>`;
+                } else {
+                    str = `<p>${data.message}</p>`;
+                }
+                resultLog.innerHTML = str + resultLog.innerHTML;
+            } else {
+                const [v1, v2] = data.split(',');
+                if (v1 && v2) {
+                    const v1C = v1.replace(/[^0-9]/ig, "").trim() * 1;
+                    const v2C = v2.replace(/[^0-9]/ig, "").trim() * 1;
+                    let num = 0
+                    if (v1C > v2C && tempFlag) {
+                        tempCount = v1C;
+                        tempFlag = false;
+                    }
+                    if (v1C < v2C) {
+                        tempCount = 0;
+                        tempFlag = true;
+                    }
+                    if (tempFlag) {
+                        num = v1C - tempCount;
+                    } else {
+                        num = Math.abs(tempCount - v1C) * 1 + 2;
+                    }
+                    progress.setAttribute("value", num)
+                    progress.setAttribute("max", v2C)
+
+                    downLog.innerHTML = `<p>下载完成第：${num} 总长度：${v2C}</p>` + downLog.innerHTML;
+                } else {
+                    downLog.innerHTML = `<p>${data}</p>` + downLog.innerHTML;
+                }
+            }
+        });
+        infoVideo.onclick = function () {
+            location.href = "/index3.html"
+        }
+        function locationFormat(url) {
+            var u = url.split("?");
+            if (typeof (u[1]) == "string") {
+                u = u[1].split("&");
+                var get = {};
+                for (var i in u) {
+                    var j = u[i].split("=");
+                    get[j[0]] = j[1];
+                }
+                return get;
+            } else {
+                return {};
+            }
+        }
+    </script>
+</body>
+
+</html>
